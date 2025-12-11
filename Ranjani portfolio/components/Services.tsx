@@ -38,7 +38,7 @@ export default function Services() {
             Leadership Activities
           </h3>
           <ul className="list-disc list-inside space-y-2 text-slate-700 ml-4">
-            <li>Session Chair for presentation track "Innovations in Research Methods" at the ASPIRE, 69th International Annual Meeting of the Human Factors and Ergonomics Society (HFES), Chicago, USA 2025</li>
+            <li>Session Chair for presentation track &quot;Innovations in Research Methods&quot; at the ASPIRE, 69th International Annual Meeting of the Human Factors and Ergonomics Society (HFES), Chicago, USA 2025</li>
             <li>Panel Discussion Moderator at ASPIRE, 69th International Annual Meeting of the Human Factors and Ergonomics Society (HFES), Chicago, USA 2025</li>
           </ul>
         </motion.div>
