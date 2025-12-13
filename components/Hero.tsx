@@ -40,10 +40,13 @@ export default function Hero() {
           >
             Cognitive Engineering Center
           </a>
-          . My research focuses on how people understand, trust, and collaborate with AI in complex, multi-agent settings, drawing on cognitive science, human factors, and sociotechnical evaluation. This work has been published and recognized across leading AI, HCI, and human factors venues.
+          . My research focuses on how people understand, trust, and collaborate with AI in complex, multi-agent settings, drawing on cognitive science, human factors, and sociotechnical evaluation.
         </p>
         <p>
-          I also have experience in building end-to-end deep learning (NLP, Computer Vision, and Reinforcement learning) pipelines. Through Applied research roles at{" "}
+          This work has been published and recognized across leading AI, HCI, and human factors venues.
+        </p>
+        <p>
+          I also have experience in building end-to-end deep learning (NLP, Computer Vision, and Reinforcement learning) pipelines. Through applied research roles at{" "}
           <a
             href="https://www.geaerospace.com/"
             target="_blank"
@@ -61,7 +64,10 @@ export default function Hero() {
           >
             Autodesk
           </a>
-          , I have developed proof-of-concept methods to enhance LLM reasoning, evaluate RAG inconsistencies, and benchmark models for scientific tasks. My work spans dataset creation, model development, experiments and ablations, and performance evaluation. I&apos;m driven to build reliable, interpretable, and human-centered AI systems grounded in real-world impact.
+          , I have developed proof-of-concept methods to enhance LLM reasoning, evaluate RAG inconsistencies, and benchmark models for scientific tasks.
+        </p>
+        <p>
+          My work spans dataset creation, model development, experiments and ablations, and performance evaluation. I&apos;m driven to build reliable, interpretable, and human-centered AI systems grounded in real-world impact.
         </p>
       </div>
 

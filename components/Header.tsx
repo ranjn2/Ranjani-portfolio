@@ -42,7 +42,7 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/ranjanin2/",
     label: "LinkedIn",
   },
-  { icon: Mail, href: "mailto:nranj2@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:rnarayanan35@gatech.edu", label: "Email" },
 ];
 
 export default function Header() {
@@ -163,14 +163,9 @@ export default function Header() {
           className="flex flex-col items-center"
         >
           {/* Name */}
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6 text-center">
             Ranjani Narayanan
           </h1>
-
-          {/* Tagline */}
-          <p className="text-base md:text-lg text-slate-600 mb-6 text-center">
-            Rethinking how AI can move beyond tools to become teammates
-          </p>
 
           {/* Profile Image - Circular */}
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-slate-300 bg-slate-100 mb-6 flex items-center justify-center overflow-hidden">
