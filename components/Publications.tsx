@@ -177,7 +177,7 @@ export default function Publications() {
                         )}
                       </CardTitle>
                       <CardDescription className="text-slate-600 font-medium">
-                        {pub.venue}
+                        {pub.venue} <span className="text-slate-500 italic">(Expected 2026)</span>
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -298,7 +298,7 @@ export default function Publications() {
                         )}
                       </CardTitle>
                       <CardDescription className="text-slate-600 font-medium">
-                        {pub.venue}
+                        {pub.venue} <span className="text-slate-500 italic">(Expected 2026)</span>
                       </CardDescription>
                     </CardHeader>
                   </Card>

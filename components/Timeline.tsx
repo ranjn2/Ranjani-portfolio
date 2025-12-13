@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Image, Award, Star, Heart } from "lucide-react";
+import { Image, Award, Star, Heart, Camera } from "lucide-react";
 
 const boldKeywords = [
   "Graduated",
@@ -150,6 +150,17 @@ const timelineEvents = [
   {
     year: "February 2024",
     event:
+      "Presented and won travel grant of $1500 for best poster at the Georgia Tech Career, Research, and Innovation Development Conference. Poster was titled - Shared Mental Models for Human-AI Teaming",
+    researchLink: null,
+    icon: {
+      type: "award",
+      file: "/poster.pdf",
+    },
+    boldTexts: ["Presented and won", "Georgia Tech Career, Research, and Innovation Development Conference", "Shared Mental Models for Human-AI Teaming"],
+  },
+  {
+    year: "February 2024",
+    event:
       "Published at the ACM Conference on Human Factors in Computing Systems (CHI) Workshop",
     researchLink: "/research#pub-influence-of-human-ai-team-structuring",
   },
@@ -158,6 +169,10 @@ const timelineEvents = [
     event:
       "AI Research Fellow Intern at GE Aerospace at the GE Research Center in Niskayuna, NY",
     researchLink: null,
+    icon: {
+      type: "camera",
+      file: "/2024.jpg",
+    },
   },
   {
     year: "February 2025",
@@ -184,6 +199,10 @@ const timelineEvents = [
     event:
       "AI Research Fellow Intern at GE Aerospace at the GE Research Center in Niskayuna, NY",
     researchLink: null,
+    icon: {
+      type: "camera",
+      file: "/2025.jpg",
+    },
   },
   {
     year: "October 2025",
@@ -201,7 +220,7 @@ export default function Timeline() {
       transition={{ duration: 0.6, delay: 0.4 }}
       className="mt-12"
     >
-      <h3 className="text-xl font-bold text-slate-900 mb-6">Timeline</h3>
+      <h3 className="text-xl font-bold text-slate-900 mb-6">News</h3>
       <div className="relative">
         {/* Timeline line */}
         <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-slate-200"></div>
@@ -226,10 +245,117 @@ export default function Timeline() {
                   {item.year}
                 </div>
                 <div className="flex items-center gap-2">
-                  {item.researchLink ? (
-                    <Link href={item.researchLink} className="flex-1">
-                      <p className="text-base md:text-lg text-slate-700 leading-relaxed hover:text-blue-600 transition-colors cursor-pointer">
-                        {formatEventText(item.event).map((part, i) =>
+                  {(() => {
+                    const eventText = item.event;
+                    const boldTexts = item.boldTexts;
+                    return item.researchLink ? (
+                      <Link href={item.researchLink} className="flex-1">
+                        <p className="text-base md:text-lg text-slate-700 leading-relaxed hover:text-blue-600 transition-colors cursor-pointer">
+                          {boldTexts ? (
+                            (() => {
+                              let text = eventText;
+                              const parts: Array<{ text: string; bold: boolean }> = [];
+                              let lastIndex = 0;
+                              
+                              // Sort boldTexts by length (longest first) to avoid partial matches
+                              const sortedBoldTexts = [...boldTexts].sort((a, b) => b.length - a.length);
+                              
+                              for (const boldText of sortedBoldTexts) {
+                                const index = text.indexOf(boldText, lastIndex);
+                                if (index !== -1) {
+                                  // Add text before match
+                                  if (index > lastIndex) {
+                                    parts.push({ text: text.substring(lastIndex, index), bold: false });
+                                  }
+                                  // Add bold text
+                                  parts.push({ text: boldText, bold: true });
+                                  lastIndex = index + boldText.length;
+                                }
+                              }
+                              // Add remaining text
+                              if (lastIndex < text.length) {
+                                parts.push({ text: text.substring(lastIndex), bold: false });
+                              }
+                              
+                              return parts.length > 0 ? parts.map((part, i) =>
+                                part.bold ? (
+                                  <span key={i} className="font-bold">
+                                    {part.text}
+                                  </span>
+                                ) : (
+                                  <span key={i}>{part.text}</span>
+                                )
+                              ) : formatEventText(eventText).map((part, i) =>
+                              part.bold ? (
+                                <span key={i} className="font-bold">
+                                  {part.text}
+                                </span>
+                              ) : (
+                                <span key={i}>{part.text}</span>
+                              )
+                            );
+                          })()
+                        ) : (
+                          formatEventText(eventText).map((part, i) =>
+                            part.bold ? (
+                              <span key={i} className="font-bold">
+                                {part.text}
+                              </span>
+                            ) : (
+                              <span key={i}>{part.text}</span>
+                            )
+                          )
+                        )}
+                      </p>
+                    </Link>
+                  ) : (
+                    <p className="text-base md:text-lg text-slate-700 leading-relaxed flex-1">
+                      {boldTexts ? (
+                        (() => {
+                          let text = eventText;
+                          const parts: Array<{ text: string; bold: boolean }> = [];
+                          let lastIndex = 0;
+                          
+                          // Sort boldTexts by length (longest first) to avoid partial matches
+                          const sortedBoldTexts = [...boldTexts].sort((a, b) => b.length - a.length);
+                          
+                          for (const boldText of sortedBoldTexts) {
+                            const index = text.indexOf(boldText, lastIndex);
+                            if (index !== -1) {
+                              // Add text before match
+                              if (index > lastIndex) {
+                                parts.push({ text: text.substring(lastIndex, index), bold: false });
+                              }
+                              // Add bold text
+                              parts.push({ text: boldText, bold: true });
+                              lastIndex = index + boldText.length;
+                            }
+                          }
+                          // Add remaining text
+                          if (lastIndex < text.length) {
+                            parts.push({ text: text.substring(lastIndex), bold: false });
+                          }
+                          
+                          return parts.length > 0 ? parts.map((part, i) =>
+                            part.bold ? (
+                              <span key={i} className="font-bold">
+                                {part.text}
+                              </span>
+                            ) : (
+                              <span key={i}>{part.text}</span>
+                            )
+                          ) : formatEventText(eventText).map((part, i) =>
+                            part.bold ? (
+                              <span key={i} className="font-bold">
+                                {part.text}
+                              </span>
+                            ) : (
+                              <span key={i}>{part.text}</span>
+                            )
+                          );
+                        })()
+                      ) : (
+                        formatEventText(eventText).map((part, i) =>
                           part.bold ? (
                             <span key={i} className="font-bold">
                               {part.text}
@@ -237,22 +363,11 @@ export default function Timeline() {
                           ) : (
                             <span key={i}>{part.text}</span>
                           )
-                        )}
-                      </p>
-                    </Link>
-                  ) : (
-                    <p className="text-base md:text-lg text-slate-700 leading-relaxed flex-1">
-                      {formatEventText(item.event).map((part, i) =>
-                        part.bold ? (
-                          <span key={i} className="font-bold">
-                            {part.text}
-                          </span>
-                        ) : (
-                          <span key={i}>{part.text}</span>
                         )
                       )}
                     </p>
-                  )}
+                  );
+                  })()}
                   {item.icon && (
                     <div className="flex-shrink-0">
                       {item.icon.type === "kudoboard" && (
@@ -286,6 +401,17 @@ export default function Timeline() {
                             <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
                           </div>
                         </div>
+                      )}
+                      {item.icon.type === "camera" && (
+                        <a
+                          href={item.icon.file}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-700 transition-colors"
+                          title="View Photo"
+                        >
+                          <Camera className="h-5 w-5" />
+                        </a>
                       )}
                     </div>
                   )}
