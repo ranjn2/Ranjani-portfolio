@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Human-AI Collaborative Diagnostics",
     category: "Research",
-    technologies: ["Python", "LLM"],
+    technologies: ["Python", "RAG", "LLM-Assisted Decision Making"],
     description: "Investigates how human medical experts interact with LLM-based AI advice in diagnostic settings. Explores expert-AI collaboration where AI serves as an adjunct to human expertise, combining AI's pattern recognition capabilities with human intuition and experience. Focuses on in-the-loop expert engagement in critical medical decision-making, addressing complex factors including patient data integration, variability, and social/legal considerations in healthcare AI adoption.",
     github: "https://github.com/ranjn2/Human-AI-Collaborative-Decision-Making",
   },
@@ -22,7 +22,7 @@ const projects = [
     title: "GANs and VAE to Model Multimodal Distribution",
     category: "Research",
     technologies: ["Python", "PyTorch"],
-    description: "Implemented Variational Autoencoders and DC-GANs for the FashionMNIST and STL-10 datasets. Used Pytorch for implementation. Used FID and IS loss functions for training and objective performance evaluation.",
+    description: "Implemented Variational Autoencoders and DC-GANs for the FashionMNIST and STL-10 datasets. Used FID and IS loss functions for training and objective performance evaluation.",
     github: "https://github.com/ranjn2/vae-gan-image-generation",
   },
   {
@@ -36,8 +36,8 @@ const projects = [
     title: "Learning Object Pose from UAV Motion",
     category: "Research",
     technologies: ["Python", "Unity3D", "PyTorch"],
-    description: "Created a synthetic dataset of 2d images generated from UAV interaction within a unity3d simulation environment. Implemented domain randomization for augmenting the dataset and improving model robustness. Methods consisted of transfer learning and benchmarking across different image neural nets.",
-    github: "https://github.com",
+    description: "Developed a synthetic dataset of 2D images generated from UAV interaction within a Unity3D simulation environment. Implemented domain randomization for augmenting the dataset and improving model robustness. Methods consisted of transfer learning and benchmarking across different image neural nets.",
+    github: "https://github.com/ranjn2/pose-estimation",
   },
   {
     title: "Object Detection using YOLOv1",
@@ -64,7 +64,7 @@ const projects = [
     title: "Deep Learning Based Authorship Identification",
     category: "Research",
     technologies: ["Python", "PyTorch", "LSTM", "GRU"],
-    description: "Implemented multi-class classification using lstm, bi-lstm and GRU at sentence level and article levels for corporate news datasets (c50 and Reuters'). Modeling was done on large corpora of texts. Handled semantic and metaphoric words using stylometric classification, resulting in improved performance.",
+    description: "End-to-end multi-class classification pipeline for authorship of corporate news articles (C50 and Reuters datasets) using LSTM, Bi-LSTM, and GRU across sentence and article levels.",
     github: "https://github.com/arthtalati/Deep-Learning-based-Authorship-Identification",
   },
 ]
@@ -107,8 +107,7 @@ export default function Projects() {
                 )}
               </div>
               <div className="mb-2">
-                <span className="text-red-600 font-medium">[{project.category}]</span>
-                <span className="text-slate-600 ml-2">
+                <span className="text-slate-600">
                   {project.technologies.join(", ")}
                 </span>
               </div>
