@@ -1,15 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github } from "lucide-react"
+import { Github, FileText } from "lucide-react"
 
 const projects = [
   {
-    title: "Human-AI Collaborative Diagnostics",
+    title: "Human-AI Medical Decision Making: Collaborative Diagnostics",
     category: "Research",
     technologies: ["Python", "RAG", "LLM-Assisted Decision Making"],
     description: "Investigates how human medical experts interact with LLM-based AI advice in diagnostic settings. Explores expert-AI collaboration where AI serves as an adjunct to human expertise, combining AI's pattern recognition capabilities with human intuition and experience. Focuses on in-the-loop expert engagement in critical medical decision-making, addressing complex factors including patient data integration, variability, and social/legal considerations in healthcare AI adoption.",
     github: "https://github.com/ranjn2/Human-AI-Collaborative-Decision-Making",
+    reportFile: "/final_report.pdf",
   },
   {
     title: "Generative Adversarial Reinforcement Learning",
@@ -94,17 +95,32 @@ export default function Projects() {
                 <h3 className="text-lg font-bold text-blue-600">
                   {project.title}
                 </h3>
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-600 hover:text-slate-900 transition-colors flex-shrink-0 mt-1"
-                    aria-label="GitHub"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
-                )}
+                <div className="flex items-center gap-2 flex-shrink-0 mt-1">
+                  {project.reportFile && (
+                    <a
+                      href={project.reportFile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-600 hover:text-slate-900 transition-colors"
+                      aria-label="View Report"
+                      title="View Report"
+                    >
+                      <FileText className="h-5 w-5" />
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-600 hover:text-slate-900 transition-colors"
+                      aria-label="GitHub"
+                      title="GitHub"
+                    >
+                      <Github className="h-5 w-5" />
+                    </a>
+                  )}
+                </div>
               </div>
               <div className="mb-2">
                 <span className="text-slate-600">
