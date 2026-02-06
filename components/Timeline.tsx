@@ -210,6 +210,13 @@ const timelineEvents = [
       "Published and presented my paper at Human Factors and Ergonomics Society Annual Meeting (HFES) in Chicago, IL",
     researchLink: "/research#pub-development-of-mental-models-in-decision",
   },
+  {
+    year: "February 2026",
+    event:
+      "Published my work at International Journal of Human Computer Interaction",
+    researchLink: "/research#pub-designing-for-oversight-an-empirical-investigation-of",
+    boldTexts: ["International Journal of Human Computer Interaction"],
+  },
 ];
 
 export default function Timeline() {

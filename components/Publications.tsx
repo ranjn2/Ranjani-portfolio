@@ -16,7 +16,7 @@ const journals = [
       "Designing for Oversight: An Empirical Investigation of the Dual Impact of AI Dependency and Information Abstraction on Human Supervision in Decision-Making Teams",
     venue: "International Journal of Human Computer Interaction",
     venueLink: "https://www.tandfonline.com/journals/hihc20",
-    pdfLink: "https://journals.sagepub.com/doi/full/10.1177/21695067231192195",
+    pdfLink: "https://doi.org/10.1080/10447318.2026.2618568",
     description:
       "Investigates how AI dependency and information abstraction levels impact human oversight in decision-making teams, examining the dual effects on supervision quality and team performance.",
   },
@@ -163,21 +163,17 @@ export default function Publications() {
                   >
                     <CardHeader>
                       <CardTitle className="text-lg font-bold">
-                        {isDesigningForOversight ? (
-                          <span className="text-slate-900">{pub.title}</span>
-                        ) : (
-                          <a
-                            href={pub.pdfLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:text-blue-700 hover:underline transition-colors"
-                          >
-                            {pub.title}
-                          </a>
-                        )}
+                        <a
+                          href={pub.pdfLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                        >
+                          {pub.title}
+                        </a>
                       </CardTitle>
                       <CardDescription className="text-slate-600 font-medium">
-                        {pub.venue} <span className="text-slate-500 italic">(Expected 2026)</span>
+                        {pub.venue}
                       </CardDescription>
                     </CardHeader>
                   </Card>
