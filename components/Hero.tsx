@@ -64,10 +64,10 @@ export default function Hero() {
           >
             Autodesk
           </a>
-          , I have developed proof-of-concept methods to enhance LLM reasoning, evaluate RAG inconsistencies, and benchmark models for scientific tasks.
+          , my work spans dataset creation, model development, experiments and ablations, and performance evaluation and benchmarking.
         </p>
         <p>
-          My work spans dataset creation, model development, experiments and ablations, and performance evaluation. I&apos;m driven to build reliable, interpretable, and human-centered AI systems grounded in real-world impact.
+          I&apos;m driven to build reliable, interpretable, and human-centered AI systems grounded in real-world impact.
         </p>
       </div>
 
