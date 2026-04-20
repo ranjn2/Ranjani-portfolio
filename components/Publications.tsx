@@ -28,8 +28,7 @@ const conferences = [
       "Evaluating Large Language Models on Arithmetic and Interval Labeling Problems with Syntactic Perturbations",
     venue: "IEEE International Conference on Data Mining Workshops (ICDMW)",
     venueLink: "https://www.ieee.org/conferences/index.html",
-    pdfLink:
-      "https://github.com/GEAerospace/llm-evaluation-trailzeroarith-intervallabel",
+    pdfLink: "https://ieeexplore.ieee.org/document/11415906/",
     description:
       "Evaluates the performance of large language models on arithmetic and interval labeling tasks when subjected to syntactic perturbations, assessing model robustness and reliability.",
   },
