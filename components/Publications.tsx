@@ -122,6 +122,14 @@ const inPreparation = [
     description:
       "A conceptual guide for situating theoretical and empirical research in human-machine interactions.",
   },
+  {
+    title:
+      "Improving the State of the Art for Training Human-AI Teams: A New Model for Teaming",
+    venue: "Manuscript in preparation",
+    venueLink: null,
+    pdfLink: "#",
+    description: "",
+  },
 ];
 
 export default function Publications() {
@@ -405,9 +413,7 @@ export default function Publications() {
                   .toLowerCase()
                   .replace(/[^a-z0-9]+/g, "-")
                   .substring(0, 50)}`;
-                const isHumanMachineInteractions = pub.title.includes(
-                  "Human-Machine Interactions"
-                );
+                const isPlainTitle = pub.pdfLink === "#";
                 return (
                   <Card
                     key={index}
@@ -416,7 +422,7 @@ export default function Publications() {
                   >
                     <CardHeader>
                       <CardTitle className="text-lg font-bold">
-                        {isHumanMachineInteractions ? (
+                        {isPlainTitle ? (
                           <span className="text-slate-900">{pub.title}</span>
                         ) : (
                           <a

@@ -23,7 +23,8 @@ export default function Services() {
             Reviewer
           </h3>
           <ul className="list-disc list-inside space-y-2 text-slate-700 ml-4">
-            <li>International Journal of Human Computer Interaction</li>
+            <li>International Journal of Human Computer Interaction (Student co-reviewer with Prof. Karen Feigh)</li>
+            <li>International Journal of Industrial Ergonomics (Student co-reviewer with Prof. Karen Feigh)</li>
             <li>ACM Conference on Human Factors in Computing Systems (ACM CHI)</li>
             <li>Human Factors and Ergonomics Society (HFES)</li>
             <li>Book: Advancements in Human Agent Teaming Research Infrastructure: Testbeds, Metrics, & Concepts.</li>
@@ -46,6 +47,21 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <h3 className="text-lg font-bold text-blue-600 mb-4">
+            Panelist
+          </h3>
+          <p className="text-slate-700 font-semibold mb-2">
+            Georgia Tech Safe, Scalable, and Sustainable Human-AI-Robot Teaming: Interaction, Synergy, and Augmentation (Spring 2026) - Supported by IRIM and CHART
+          </p>
+          <p className="text-slate-700 leading-relaxed">
+            Presenter and Panelist for an interactive discussion with a focus on identifying key research gaps, opportunities for shared infrastructure, industrial partnerships, and strategies for responding to funding calls.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h3 className="text-lg font-bold text-blue-600 mb-4">
             Researcher in Social Action Research at Georgia Institute of Technology (Fall 2025)
