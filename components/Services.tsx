@@ -22,12 +22,39 @@ export default function Services() {
           <h3 className="text-lg font-bold text-blue-600 mb-4">
             Reviewer
           </h3>
+          <div className="space-y-4">
+            <div>
+              <h4 className="text-base font-semibold text-slate-900 mb-2">
+                Journals
+              </h4>
+              <ul className="list-disc list-inside space-y-2 text-slate-700 ml-4">
+                <li>International Journal of Human Computer Interaction (Student co-reviewer with Prof. Karen Feigh)</li>
+                <li>International Journal of Industrial Ergonomics (Student co-reviewer with Prof. Karen Feigh)</li>
+                <li>Behavior and Information Technology</li>
+                <li>Journal of Aerospace Information Systems (AIAA)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-base font-semibold text-slate-900 mb-2">
+                Conferences
+              </h4>
+              <ul className="list-disc list-inside space-y-2 text-slate-700 ml-4">
+                <li>ACM Conference on Human Factors in Computing Systems (ACM CHI)</li>
+                <li>Human Factors and Ergonomics Society (HFES)</li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+        >
+          <h3 className="text-lg font-bold text-black mb-4">
+            Book
+          </h3>
           <ul className="list-disc list-inside space-y-2 text-slate-700 ml-4">
-            <li>International Journal of Human Computer Interaction (Student co-reviewer with Prof. Karen Feigh)</li>
-            <li>International Journal of Industrial Ergonomics (Student co-reviewer with Prof. Karen Feigh)</li>
-            <li>ACM Conference on Human Factors in Computing Systems (ACM CHI)</li>
-            <li>Human Factors and Ergonomics Society (HFES)</li>
-            <li>Book: Advancements in Human Agent Teaming Research Infrastructure: Testbeds, Metrics, & Concepts.</li>
+            <li>Advancements in Human Agent Teaming Research Infrastructure: Testbeds, Metrics, & Concepts.</li>
           </ul>
         </motion.div>
         <motion.div
