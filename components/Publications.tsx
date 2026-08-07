@@ -122,16 +122,18 @@ const inPreparation = [
     description:
       "A conceptual guide for situating theoretical and empirical research in human-machine interactions.",
   },
+];
+
+const technicalReports = [
   {
     title:
       "Improving the State of the Art for Training Human-AI Teams: A New Model for Teaming",
-    venue: "Manuscript in preparation",
+    venue: "Sonalysts Inc. & Georgia Institute of Technology",
     venueLink: null,
-    pdfLink: "#",
+    pdfLink: "/technical-report-6b-new-model-for-teaming.pdf",
     description: "",
   },
 ];
-
 export default function Publications() {
   return (
     <section className="mb-16">
@@ -353,12 +355,56 @@ export default function Publications() {
           </motion.div>
         )}
 
+        {/* Technical Reports */}
+        {technicalReports.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <h3 className="text-xl font-bold text-slate-900 mb-4">
+              Technical Reports
+            </h3>
+            <div className="space-y-4">
+              {technicalReports.map((pub, index) => {
+                const pubId = `pub-${pub.title
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, "-")
+                  .substring(0, 50)}`;
+                return (
+                  <Card
+                    key={index}
+                    id={pubId}
+                    className="border-slate-200 hover:border-slate-300 transition-colors scroll-mt-20"
+                  >
+                    <CardHeader>
+                      <CardTitle className="text-lg font-bold">
+                        <a
+                          href={pub.pdfLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                        >
+                          {pub.title}
+                        </a>
+                      </CardTitle>
+                      <CardDescription className="text-slate-600 font-medium">
+                        {pub.venue}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+
         {/* Under Review */}
         {underReview.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
           >
             <h3 className="text-xl font-bold text-slate-900 mb-4">
               Under Review
@@ -402,7 +448,7 @@ export default function Publications() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
           >
             <h3 className="text-xl font-bold text-slate-900 mb-4">
               In Preparation
