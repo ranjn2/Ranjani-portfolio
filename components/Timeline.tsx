@@ -23,6 +23,7 @@ const boldKeywords = [
   "Fellow Intern",
   "Intern",
   "Georgia Institute of Technology",
+  "Georgia Tech",
   "University of Pennsylvania",
   "Sardar Patel College of Engineering",
   "Sardar Patel College",
@@ -37,6 +38,16 @@ const boldKeywords = [
   "HUCAPP",
   "IEEE Conference on Cognitive and Computational Aspects of Situation Management",
   "CogSIMA",
+  "Center for Human-AI-Robot Teaming",
+  "CHART",
+  "Office of Naval Research",
+  "Technical Report",
+  "Sonalysts, Inc.",
+  "Sonalysts",
+  "Successfully defended",
+  "Ph.D. Dissertation",
+  "Dissertation",
+  "Shared Mental Models",
 ];
 
 function formatEventText(text: string) {
@@ -216,6 +227,29 @@ const timelineEvents = [
       "Published my work at International Journal of Human Computer Interaction",
     researchLink: "/research#pub-designing-for-oversight-an-empirical-investigation-of",
     boldTexts: ["International Journal of Human Computer Interaction"],
+  },
+  {
+    year: "May 2026",
+    event:
+      "Presented work on Shared Mental Models at the Center for Human-AI-Robot Teaming (CHART) at Georgia Tech",
+    researchLink: null,
+  },
+  {
+    year: "July 2026",
+    event:
+      "Presented our work at the Office of Naval Research in Arlington, VA",
+    researchLink: null,
+  },
+  {
+    year: "August 2026",
+    event: "Published a Technical Report with Sonalysts, Inc.",
+    researchLink:
+      "/research#pub-improving-the-state-of-the-art-for-training-human-",
+  },
+  {
+    year: "August 2026",
+    event: "Successfully defended my Ph.D. Dissertation",
+    researchLink: null,
   },
 ];
 
