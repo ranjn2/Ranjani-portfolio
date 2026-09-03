@@ -9,7 +9,7 @@ const courierPrime = Courier_Prime({
 })
 
 export const metadata: Metadata = {
-  title: "Ranjani Narayanan | PhD Candidate @ Georgia Tech",
+  title: "Ranjani Narayanan | Senior Applied Scientist @ Microsoft",
   description: "Expanding how agents can become teammates, not just tools.",
 }
 

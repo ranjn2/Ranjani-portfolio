@@ -42,7 +42,7 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/ranjanin2/",
     label: "LinkedIn",
   },
-  { icon: Mail, href: "mailto:rnarayanan35@gatech.edu", label: "Email" },
+  { icon: Mail, href: "mailto:nranj2@gmail.com", label: "Email" },
 ];
 
 export default function Header() {
@@ -97,7 +97,7 @@ export default function Header() {
                 Ranjani Narayanan
               </h1>
               <p className="text-sm text-slate-600 mt-1">
-                PhD Candidate @ Georgia Tech
+                Senior Applied Scientist @ Microsoft
               </p>
             </div>
             <nav className="flex flex-col space-y-4">

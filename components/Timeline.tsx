@@ -30,6 +30,8 @@ const boldKeywords = [
   "University of Mumbai",
   "Autodesk",
   "GE Aerospace",
+  "Senior Applied Scientist",
+  "Microsoft",
   "Human Factors and Ergonomics Society Annual Meeting",
   "HFES",
   "ACM Conference on Human Factors in Computing Systems",
@@ -249,6 +251,11 @@ const timelineEvents = [
   {
     year: "August 2026",
     event: "Successfully defended my Ph.D. Dissertation",
+    researchLink: null,
+  },
+  {
+    year: "August 2026",
+    event: "Started as a Senior Applied Scientist at Microsoft",
     researchLink: null,
   },
 ];
